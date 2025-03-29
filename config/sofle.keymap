@@ -38,6 +38,22 @@
         };
     };
 
+    macros {
+        vim_paste: vim_paste {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DQT &kp PLUS &kp P>;
+            label = "VIM_PASTE";
+        };
+
+        vim_yank: vim_yank {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DQT &kp PLUS &kp Y>;
+            label = "VIM_YANK";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -91,10 +107,10 @@
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&none  &none  &none  &none  &none  &none                  &kp PG_UP  &kp K_MUTE  &kp K_VOLUME_DOWN  &kp K_VOLUME_UP  &none     &kp PRINTSCREEN
-&none  &none  &none  &none  &none  &none                  &kp PG_DN  &none       &kp UP             &none            &none     &kp DEL
-&none  &none  &none  &none  &none  &none                  &none      &kp LEFT    &kp DOWN           &kp RIGHT        &kp HOME  &kp END
-&none  &none  &none  &none  &none  &none  &none    &none  &none      &none       &none              &none            &none     &none
+&none  &none  &none  &none  &none  &none                  &kp PG_UP  &kp K_MUTE  &kp K_VOLUME_DOWN  &kp K_VOLUME_UP  &none       &kp PRINTSCREEN
+&none  &none  &none  &none  &none  &none                  &kp PG_DN  &none       &kp UP             &vim_yank        &vim_paste  &kp DEL
+&none  &none  &none  &none  &none  &none                  &none      &kp LEFT    &kp DOWN           &kp RIGHT        &kp HOME    &kp END
+&none  &none  &none  &none  &none  &none  &none    &none  &none      &none       &none              &none            &none       &none
               &none  &none  &none  &none  &none    &none  &none      &none       &none              &none
             >;
         };
