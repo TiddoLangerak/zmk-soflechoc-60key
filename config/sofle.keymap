@@ -72,11 +72,11 @@
             //               |     |      |      |      |        |  |       |      |       |       |      |
 
             bindings = <
-&none  &kp F1  &kp F2     &kp F3    &kp F4    &kp F5                       &kp F6          &kp F7         &kp F8          &kp F9                &kp F10                &kp F11
-&none  &none   &kp N2     &kp N3    &kp N4    &kp N5                       &kp CARET       &kp AMPERSAND  &kp ASTRK       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp F12
-&none  &none   &kp AT     &kp HASH  &kp DLLR  &kp PRCNT                    &kp MINUS       &kp EQUAL      &kp ASTRK       &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PIPE
-&none  &none   &kp MINUS  &kp PLUS  &kp LBRC  &kp RBRC   &trans    &trans  &kp UNDERSCORE  &kp PLUS       &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp PIPE               &trans
-               &trans     &trans    &trans    &trans     &trans    &trans  &trans          &trans         &trans          &trans
+&none  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                  &kp F6  &kp F7  &kp F8          &kp F9                 &kp F10        &kp F11
+&none  &none   &none   &none   &none   &none                   &none   &none   &kp LPAR        &kp RIGHT_PARENTHESIS  &none          &kp F12
+&none  &none   &none   &none   &none   &none                   &none   &none   &kp LEFT_BRACE  &kp RIGHT_BRACE        &kp BACKSLASH  &kp PIPE
+&none  &none   &none   &none   &none   &none   &none    &none  &none   &none   &kp LBKT        &kp RBKT               &kp EQUAL      &kp PLUS
+               &none   &none   &none   &none   &none    &none  &none   &none   &none           &none
             >;
 
             sensor-bindings =
